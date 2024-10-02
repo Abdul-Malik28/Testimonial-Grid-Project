@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./*.html'],
-  screen:{
+  screen: {
     sm: '480px',
     md: '768px',
     lg: '976px',
@@ -9,11 +9,13 @@ module.exports = {
   },
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         sans: ['Barlow Semi Condensed', 'sans-serif']
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }
 
